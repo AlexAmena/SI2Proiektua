@@ -15,7 +15,6 @@ import domain.ElkarrizketaContainer;
 import domain.Event;
 import domain.Message;
 import domain.MezuakContainer;
-//import domain.Booking;
 import domain.Question;
 import domain.Quote;
 import domain.Registered;
@@ -81,11 +80,11 @@ public interface BLFacade  {
 	
 	@WebMethod public Collection<Question> findQuestion(Event event);
 	
-	@WebMethod public void DiruaSartu(User u, Double dirua, String mota); 
+	@WebMethod public void diruaSartu(User u, Double dirua, String mota); 
 	
 	@WebMethod public Collection<Quote> findQuote(Question question); 
 	
-	@WebMethod public boolean ApustuaEgin(User u, Vector<Quote> q, Double balioa, Integer apustuaGalarazi); 
+	@WebMethod public boolean apustuaEgin(User u, Vector<Quote> q, Double balioa, Integer apustuaGalarazi); 
 	
 	@WebMethod public List<Apustua> findApustua(User u); 
 	
@@ -101,7 +100,7 @@ public interface BLFacade  {
 	
 	@WebMethod public List<Transaction> findTransakzioak(User u); 
 	
-	@WebMethod public void EmaitzakIpini(Quote quote) throws EventNotFinished;
+	@WebMethod public void emaitzakIpini(Quote quote) throws EventNotFinished;
 	
 	@WebMethod  public boolean gertaeraEzabatu(Event ev);
 	
@@ -135,7 +134,7 @@ public interface BLFacade  {
 	
 	@WebMethod public List<Event> getEventsTeam(Team t);
 	
-	@WebMethod public Elkarrizketa findElkarrizketa(Elkarrizketa elk);
+	@WebMethod public Elkarrizketa findElkarrizketa(Elkarrizketa elk);;
 	
 	@WebMethod public List<MezuakContainer> mezuakLortu(Elkarrizketa e);
 	
