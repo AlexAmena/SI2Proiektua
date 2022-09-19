@@ -93,7 +93,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 		
 		return qry;
-   };
+   }
 	
 	/**
 	 * This method invokes the data access to retrieve the events of a given date 
@@ -173,9 +173,9 @@ public class BLFacadeImplementation  implements BLFacade {
     	return b;
     }
     @WebMethod	
-    public void storeQuote(String forecast, Double Quote, Question question) throws QuoteAlreadyExist {
+    public void storeQuote(String forecast, Double quote, Question question) throws QuoteAlreadyExist {
     	dbManager.open(false);
-    	dbManager.storeQuote(forecast, Quote, question);
+    	dbManager.storeQuote(forecast, quote, question);
     	dbManager.close();
     }
     @WebMethod	
@@ -193,16 +193,16 @@ public class BLFacadeImplementation  implements BLFacade {
 		return v;
     }
     @WebMethod	
-    public void DiruaSartu(User u, Double dirua, String mota) {
+    public void diruaSartu(User u, Double dirua, String mota) {
     	Date data = new Date();
     	dbManager.open(false); 
-    	dbManager.DiruaSartu(u, dirua, data, mota);
+    	dbManager.diruaSartu(u, dirua, data, mota);
     	dbManager.close();
     }
     @WebMethod	
-    public boolean ApustuaEgin(User u, Vector<Quote> q, Double balioa, Integer apustuaGalarazi) {
+    public boolean apustuaEgin(User u, Vector<Quote> q, Double balioa, Integer apustuaGalarazi) {
     	dbManager.open(false);
-    	boolean b = dbManager.ApustuaEgin(u, q, balioa, apustuaGalarazi);
+    	boolean b = dbManager.apustuaEgin(u, q, balioa, apustuaGalarazi);
     	dbManager.close();
     	return b; 
     }
@@ -221,14 +221,6 @@ public class BLFacadeImplementation  implements BLFacade {
     	dbManager.close();
     	return a;
     }
-    /*
-    @WebMethod	
-    public List<ApustuaContainer> findApustuaContainer(User u){
-    	dbManager.open(false);
-    	List<ApustuaContainer> a = dbManager.findApustuaContainer(u); 
-    	dbManager.close();
-    	return a; 
-    }*/
     @WebMethod	
     public void apustuaEzabatu(User user1, ApustuAnitza apustua) {
     	dbManager.open(false);
@@ -243,9 +235,9 @@ public class BLFacadeImplementation  implements BLFacade {
     	return l; 
     }
     @WebMethod	
-    public void EmaitzakIpini(Quote quote) throws EventNotFinished {
+    public void emaitzakIpini(Quote quote) throws EventNotFinished {
     	dbManager.open(false);
-    	dbManager.EmaitzakIpini(quote);
+    	dbManager.emaitzakIpini(quote);
     	dbManager.close();
     }
     @WebMethod	
