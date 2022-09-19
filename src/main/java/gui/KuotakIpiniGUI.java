@@ -34,7 +34,7 @@ import exceptions.QuoteAlreadyExist;
 
 public class KuotakIpiniGUI extends JFrame{
 	
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 
 	private static final long serialVersionUID = 1L;
 

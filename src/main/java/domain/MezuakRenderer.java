@@ -13,7 +13,7 @@ import gui.MainGUI;
 
 public class MezuakRenderer extends JLabel implements ListCellRenderer<MezuakContainer>{
 
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 	private User user; 
 	 public MezuakRenderer(User u) {
 		  setOpaque(true);

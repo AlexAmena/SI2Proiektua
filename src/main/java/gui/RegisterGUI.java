@@ -25,7 +25,7 @@ public class RegisterGUI extends JFrame {
 	private JLabel izenaSartu = new JLabel(); 
 	private JLabel passSartu = new JLabel(); 
 	private JLabel kontuaSartu = new JLabel(); 
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 	private JFrame thisw;
 	private JTextField txtBank;
 

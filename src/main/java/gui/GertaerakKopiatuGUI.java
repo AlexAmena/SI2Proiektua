@@ -25,7 +25,7 @@ import exceptions.EventFinished;
 
 public class GertaerakKopiatuGUI extends JFrame{
 	private static final long serialVersionUID = 1L;
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 	private JLabel lblGertaerakKopiatu;
 	private JScrollPane scrollBar;
 	private JList list;

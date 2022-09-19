@@ -13,7 +13,7 @@ import gui.MainGUI;
 
 public class TeamRenderer extends JLabel implements ListCellRenderer<Team>{
 
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 
 	 public TeamRenderer() {
 		  setOpaque(true);

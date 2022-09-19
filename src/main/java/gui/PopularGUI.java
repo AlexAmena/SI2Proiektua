@@ -28,7 +28,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class PopularGUI extends JFrame{
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 
 	private static final long serialVersionUID = 1L;
 

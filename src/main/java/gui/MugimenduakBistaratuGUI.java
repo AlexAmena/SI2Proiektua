@@ -29,7 +29,7 @@ public class MugimenduakBistaratuGUI extends JFrame{
 	private User user;
 	private JLabel lblMugimenduakBistaratu;
 	private DefaultListModel<Transaction> apustuaEgin = new DefaultListModel<Transaction>();
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 	
 	private JList<Transaction> list;
 

@@ -29,7 +29,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class SugerenciasGUI extends JFrame{
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 
 	private static final long serialVersionUID = 1L;
 	private User user;

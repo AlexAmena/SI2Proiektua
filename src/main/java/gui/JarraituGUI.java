@@ -23,7 +23,7 @@ import domain.User;
 import javax.swing.JTextField;
 
 public class JarraituGUI extends JFrame{
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 	private static final long serialVersionUID = 1L;
 	private JLabel lblRanking;
 	private JList list;

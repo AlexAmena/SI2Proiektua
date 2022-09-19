@@ -28,7 +28,7 @@ import javax.swing.event.ListSelectionEvent;
 
 public class GertaeraInfo extends JFrame{
 	private static final long serialVersionUID = 1L;
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();	
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();	
 	private JLabel lblTitle;
 	private JLabel lblDate;
 	private JScrollPane scrollBar;

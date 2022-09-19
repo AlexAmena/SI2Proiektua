@@ -20,7 +20,7 @@ import domain.Team;
 import domain.User;
 
 public class DestacadosGUI extends JFrame{
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 
 	private static final long serialVersionUID = 1L;
 

@@ -19,7 +19,7 @@ import domain.Message;
 import domain.User;
 
 public class MezuakBidaliGUI extends JFrame{
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private  transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 
 	private static final long serialVersionUID = 1L;
 	

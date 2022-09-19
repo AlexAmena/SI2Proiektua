@@ -19,7 +19,8 @@ import domain.ApustuAnitza;
 import domain.User;
 
 public class ApustuBerdinakGUI extends JFrame{
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 	private static final long serialVersionUID = 1L;
 	private JLabel lblApustuak;
 	private JList list;

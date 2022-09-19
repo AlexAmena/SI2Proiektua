@@ -26,7 +26,7 @@ public class LoginGUI extends JFrame{
 	private JTextField txtPassword;
 	private JLabel izenaSartu = new JLabel(); 
 	private JLabel passSartu = new JLabel(); 
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 	private JFrame thisw;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;

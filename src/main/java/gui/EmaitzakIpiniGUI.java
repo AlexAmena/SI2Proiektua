@@ -34,7 +34,7 @@ import exceptions.EventNotFinished;
 import javax.swing.SwingConstants;
 
 public class EmaitzakIpiniGUI extends JFrame{
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 
 	private static final long serialVersionUID = 1L;
 

@@ -13,7 +13,7 @@ import gui.MainGUI;
 
 public class ElkarrizketaRenderer extends JLabel implements ListCellRenderer<ElkarrizketaContainer>{
 
-	private BLFacade businessLogic = MainGUI.getBusinessLogic();
+	private transient BLFacade businessLogic = MainGUI.getBusinessLogic();
 	private User user; 
 	private Boolean bool;
 	 public ElkarrizketaRenderer(User u) {
