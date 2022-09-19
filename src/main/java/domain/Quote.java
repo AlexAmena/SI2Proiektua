@@ -29,7 +29,7 @@ public class Quote implements Serializable{
 	@XmlIDREF
 	private Question question;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Apustua> apustuak = new Vector<Apustua>(); 
+	private Vector<Apustua> apustuak = new Vector<>(); 
 
 	public Quote() {
 		super();
@@ -98,7 +98,7 @@ public class Quote implements Serializable{
 		boolean aurkitua = false; 
 		int i = 0; 
 		while( i<apustuak.size() && !aurkitua) {
-			if(apustuak.get(i).getApostuaNumber()==a.getApostuaNumber()) {
+			if(apustuak.get(i).getApostuaNumber().equals(a.getApostuaNumber())) {
 				apustuak.remove(i); 
 				aurkitua = true; 
 			}
@@ -108,13 +108,18 @@ public class Quote implements Serializable{
 	
 	@Override
 	public boolean equals(Object o) {
-		if(o != null) {
+		if(o == null) return false;
+		else if(o.getClass()!=this.getClass())return false;
+		else{
 			Quote q = (Quote)o;
-			return this.getQuoteNumber()==q.getQuoteNumber();
-		} else {
+			if(this.getQuoteNumber()==q.getQuoteNumber()) {
+				return true;
+			}
 			return false;
 		}
 	}
-	
-	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
 }

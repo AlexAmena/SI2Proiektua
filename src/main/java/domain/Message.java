@@ -1,7 +1,6 @@
 package domain;
 
 import java.io.Serializable;
-import java.util.Vector;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,10 +35,8 @@ public class Message implements Serializable{
 		super();
 		this.igorlea=igorlea;
 		this.hartzailea=hartzailea;
-		//this.asunto=asunto;
 		this.testua=testua;
 		this.irakurrita=false;
-		//this.elkarrizketa=new Vector<Message>();
 		this.elkarrizketa=null;
 	}
 
