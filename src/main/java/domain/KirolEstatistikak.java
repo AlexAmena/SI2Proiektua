@@ -17,7 +17,7 @@ public class KirolEstatistikak implements Serializable{
 	@XmlID
 	@XmlJavaTypeAdapter(IntegerAdapter.class)
 	@Id @GeneratedValue
-	private Integer KENumber;
+	private Integer kENumber;
 	@XmlIDREF
 	private Registered user;
 	@XmlIDREF
@@ -35,11 +35,11 @@ public class KirolEstatistikak implements Serializable{
 	}
 	
 	public Integer getKENumber() {
-		return KENumber;
+		return kENumber;
 	}
 	
 	public void setKENumber(Integer kENumber) {
-		KENumber = kENumber;
+		this.kENumber = kENumber;
 	}
 	
 	public User getUser() {

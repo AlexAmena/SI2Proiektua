@@ -30,7 +30,7 @@ public class Elkarrizketa implements Serializable{
 	@XmlIDREF
 	private User user2;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Message> messages = new Vector<Message>();
+	private Vector<Message> messages = new Vector<>();
 	
 	public Elkarrizketa() {
 		super();

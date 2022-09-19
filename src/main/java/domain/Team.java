@@ -19,9 +19,9 @@ public class Team implements Serializable{
 	@Id 
 	private String izena;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Registered> users =new Vector<Registered>();
+	private Vector<Registered> users =new Vector<>();
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Event> events =new Vector<Event>();
+	private Vector<Event> events =new Vector<>();
 	
 	public Team() {
 		super();
