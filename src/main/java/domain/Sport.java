@@ -19,9 +19,9 @@ public class Sport implements Serializable{
 	@Id 
 	private String izena;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Event> events=new Vector<Event>();
+	private Vector<Event> events=new Vector<>();
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<KirolEstatistikak> sportEstatistikak=new Vector<KirolEstatistikak>();
+	private Vector<KirolEstatistikak> sportEstatistikak=new Vector<>();
 	private Integer apustuKantitatea;
 	
 	public Sport() {
@@ -84,10 +84,15 @@ public class Sport implements Serializable{
 	
 	@Override
 	public boolean equals(Object o) {
-		Sport sp = (Sport) o;
-		if(sp==null) {
-			return false;
+		if(o==null)return false;
+		else if(o.getClass()!=this.getClass()) return false;
+		else {
+			Sport sp = (Sport) o;
+			return this.izena.equals(sp.getIzena());
 		}
-		return this.izena.equals(sp.getIzena());
+	}
+	@Override
+	public int hashCode() {
+		return super.hashCode();
 	}
 }

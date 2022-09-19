@@ -24,20 +24,20 @@ public abstract class User implements Serializable{
 	private String password;
 	private Integer bankAccount;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Message> bidalitakoak=new Vector<Message>();
+	private Vector<Message> bidalitakoak=new Vector<>();
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Message> jasotakoak=new Vector<Message>();
+	private Vector<Message> jasotakoak=new Vector<>();
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<Elkarrizketa> elkarrizketak=new Vector<Elkarrizketa>();
+	private Vector<Elkarrizketa> elkarrizketak=new Vector<>();
 
-	public User(String usrname, String password, Integer bankAccount) {
+	protected User(String usrname, String password, Integer bankAccount) {
 		super();
 		this.usrname = usrname;
 		this.password = password;
 		this.bankAccount = bankAccount;
 	}
 	
-	public User() {
+	protected User() {
 		super();
 	}
 

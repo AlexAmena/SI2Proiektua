@@ -28,21 +28,21 @@ public class Registered extends User implements Serializable{
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 	private Vector<Jarraitzailea> nikLista;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	private Vector<KirolEstatistikak> sportEstatistikak=new Vector<KirolEstatistikak>();
+	private Vector<KirolEstatistikak> sportEstatistikak=new Vector<>();
 	@XmlIDREF
 	private Team taldea;
 
 	public Registered(String username, String password, Integer bankAccount) {
 		super(username, password, bankAccount);
 		this.dirukop = 0.0; 
-		this.transakzioak = new Vector<Transaction>();
-		this.apustuAnitzak = new Vector<ApustuAnitza>();
+		this.transakzioak = new Vector<>();
+		this.apustuAnitzak = new Vector<>();
 		this.irabazitakoa=0.0;
 		this.zenbat=0;
 		this.mode=null;
 		this.diruLimitea=0.0;
-		this.nikLista= new Vector<Jarraitzailea>();
-		this.niriLista= new Vector<Jarraitzailea>();
+		this.nikLista= new Vector<>();
+		this.niriLista= new Vector<>();
 		this.taldea=null;
 	}
 	public Registered() {
@@ -181,8 +181,8 @@ public class Registered extends User implements Serializable{
 	
 	@Override
 	public String toString() {
-		if(this.mode=="RankingGUI")
-			return this.getUsername() + " " + this.zenbat +": " + this.irabazitakoa + "€";
+		if(this.mode.equals("RankingGUI"))
+			return this.getUsername() + " " + this.zenbat +": " + this.irabazitakoa + "ï¿½";
 		else
 			return this.getUsername();
 	}
