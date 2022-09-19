@@ -134,7 +134,7 @@ public interface BLFacade  {
 	
 	@WebMethod public List<Event> getEventsTeam(Team t);
 	
-	@WebMethod public Elkarrizketa findElkarrizketa(Elkarrizketa elk);
+	@WebMethod public Elkarrizketa findElkarrizketa(Elkarrizketa elk);;
 	
 	@WebMethod public List<MezuakContainer> mezuakLortu(Elkarrizketa e);
 	
