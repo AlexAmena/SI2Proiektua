@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.util.ResourceBundle;
-import java.util.Vector;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
@@ -16,8 +15,6 @@ import javax.swing.SwingConstants;
 import businessLogic.BLFacade;
 import domain.Transaction;
 import domain.User;
-import javax.swing.JScrollBar;
-import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
