@@ -26,7 +26,6 @@ import com.toedter.calendar.JCalendar;
 
 import businessLogic.BLFacade;
 import configuration.UtilDate;
-import domain.Apustua;
 import domain.Event;
 import javax.swing.SwingConstants;
 
